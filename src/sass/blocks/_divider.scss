@@ -1,0 +1,9 @@
+ .divider {
+        width: 60px;
+        height: 3px;
+        margin-top: 4px;
+        background-color: $main-color;
+        &_resume, &_skills, &_portfolio, &_price-list {
+            margin: 25px auto 0 auto;
+        }
+    }

@@ -1,0 +1,52 @@
+.portfolio {
+    padding-top: 120px;
+   
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 280px);
+        grid-template-rows: repeat(2, minmax(280px, auto));
+        grid-auto-rows: minmax(280px, auto);
+        gap: 5px;
+        grid-template-areas: 
+        "uber pulse bread plans"
+        "iphad mac mac plans";
+       
+    }
+    &__items {
+        transition: all 0.6s ease-in-out;
+        a[target=_blank] {
+            cursor: pointer;
+        }
+        &:nth-child(1):hover, 
+        &:nth-child(2):hover {
+            transform: translateY(-20px);
+        }
+        &:hover {
+            // box-shadow: 0 0 5px 5px red;
+            filter: drop-shadow(16px 16px 20px red);
+        }
+        img {
+            width: 100%;
+        }
+    }
+   
+    #uber {
+        grid-area: uber;
+    }
+    #pulse {
+        grid-area: pulse;
+    }
+    #bread {
+        grid-area: bread;
+    }
+    #plans {
+        grid-area: plans;
+    }
+    #iphad {
+        grid-area: iphad;
+    }
+    #mac {
+        grid-area: mac;
+    }
+}

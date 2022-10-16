@@ -1,0 +1,38 @@
+.title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+    padding-left: 7px;
+    // Сделали position: relative для нашего псевдо-элемента 
+    position: relative;
+    z-index: 5;
+    @include before_circle;
+    &_aboutme {
+        color: #000000;
+    }
+    &_resume {
+        color: #000000;
+    }
+    &_fz20 {
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+    }
+    &_skills, &_portfolio, &_price-list, &_contacts, &_policy {
+        color: #000000;
+ 
+    }
+    &_progressbar {
+        font-size: 14px;
+        color: #000000;
+    }
+    &__section-title {
+        text-align: center;
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+   
+}

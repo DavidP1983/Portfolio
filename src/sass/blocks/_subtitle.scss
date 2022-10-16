@@ -1,0 +1,17 @@
+.subtitle {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    color: #fff;
+    &_aboutme, &_contacts {
+        font-size: 36px;
+        color: #000000;
+        margin-top: 6px;
+    }
+    &_resume, &_skills, &_portfolio {
+        font-size: 36px;
+        color: #000000;
+        text-align: center;
+    }
+    
+}

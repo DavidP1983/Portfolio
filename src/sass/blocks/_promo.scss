@@ -1,0 +1,40 @@
+.promo {
+    // Наш первый блок будет четко занимать всю структуру нашего экрана. Так как пользователь может открыть сайт с любого устройства
+    min-height: 100vh;
+    // Так как у нас есть hamburger c position: absolute;
+    position: relative;
+    // Поскольку весь код у нас компилируется в папку css, то нам необходимо из нее выйти и зайти в папку img
+    background: url('../img/main_bg.png') no-repeat 50%/cover;
+    padding: 205px;
+    &__subtitle {
+        // Укажим ширину заголовка для переноса текста или можем поставить тэг <br>
+        width: 535px;
+        margin-top: 10px;
+    }
+    &__info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 25px;
+    }
+    &__aboutme {
+        margin-left: 44px;
+        font-weight: 700;
+        font-size: 14px;
+        color: #ffffff;
+        // Создали видимость кнопки, чтоб было удобно попадать по ссылке
+        padding: 12px 25px;
+        height: 45px;
+        background: transparent;
+        &:hover {
+            box-shadow: 0px 4px 4px rgb(255, 255, 255, 0.56);
+            color: #ffffff;
+            text-decoration: none;
+            
+        }
+    }
+}
+
+#main {
+    transition: margin-left 1s;
+}

@@ -1,0 +1,37 @@
+.sidepanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 340px;
+    position: fixed;
+    top: 226px;
+    left: 50px;
+    z-index: 3;
+    &__divider {
+        width: 2px;
+        height: 70px;
+        background-color: #d22d2d;
+    }
+    &__text {
+        // Здесь на самом деле все наоборот. Перевернув елемент его ширина стала высотой, а высота шириной.
+        height: 148px;
+        width: 25px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 15px;
+        color: $main-color;
+        span {
+            // Делаем разворот текста и позиционируем его по X и Y
+            transform: rotate(-90deg) translate(-30%, -260%);
+            // чтоб он полностью перевернулся, так как span это строчный елемент
+            display: block;
+            // придаем ширину родителя так как он занимает только width: 25px;
+            width: 148px;
+        }
+    }
+    &__link {
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,96 @@
+.resume {
+    padding-top: 120px;
+    &__wrapper {
+        margin-top: 60px;
+        padding: 0 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 136px;
+    }
+    &__column {
+        &-title {
+            padding-left: 35px;
+            // Изменяем кружок
+            &::before {
+                width: 15px;
+                height: 15px;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            // margin-bottom: 0;
+        }
+        li {
+            position: relative;
+            // Создаем геометрическую палку вертикальную
+            &::after {
+                content: '';
+                width: 1px;
+                // высота палки будет 100% от контента в li. Calc применили для того, чтоб он правильно подсчитал высоту, палка дошла до конца контента это 100% + top: -18px;
+                height: calc(100% + 18px);
+                position: absolute;
+                top: -18px;
+                left: 0;
+                background-color: #000;
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        // горизонтальная палка которая примыкает к кружку с иконкой
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 69px;
+            width: 42px;
+            height: 1px;
+            background-color: #000;
+        }
+        &-head {
+            position: relative;
+            padding: 45px 0 0 99px;
+        }
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+        &-icon {
+            // Сам блок с иконкой - Иконка с кружком
+            position: absolute;
+            top: 55px;
+            left: 42px;
+            @include before_circle;
+            // Центрируем саму иконку
+            img {
+                position: absolute;
+                top: 9px;
+                left: 14px;
+            }
+            
+        }
+        &-title {
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+            margin-bottom: 0;
+        }
+        &-location {
+            margin-top: 2px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+       
+    }
+    
+}

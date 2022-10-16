@@ -1,0 +1,26 @@
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 36px;
+    height: 21px;
+    cursor: pointer;
+    span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #ffffff;
+        margin-bottom: 7px;
+        &:nth-child(1) {
+            width: 30px;
+        }
+        &:nth-child(3) {
+            width: 30px;
+            margin-bottom: 0;
+        }
+    }
+}
