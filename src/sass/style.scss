@@ -16,6 +16,10 @@
     margin: 0 auto;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 @import 'blocks/promo';
 @import 'blocks/title';
 @import 'blocks/subtitle';
@@ -31,3 +35,5 @@
 @import 'blocks/price';
 @import 'blocks/contacts';
 @import 'blocks/policy';
+@import 'blocks/pageup';
+@import 'base/media';

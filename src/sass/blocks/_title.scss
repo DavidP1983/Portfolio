@@ -6,7 +6,7 @@
     padding-left: 7px;
     // Сделали position: relative для нашего псевдо-элемента 
     position: relative;
-    z-index: 5;
+    z-index: 0;
     @include before_circle;
     &_aboutme {
         color: #000000;

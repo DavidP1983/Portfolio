@@ -51,7 +51,7 @@
     <aside class="sidepanel">
         <a href="#" class="sidepanel__link"><img src="icons/social/Facebook.svg" alt="facebook" /></a>
         <a href="#" class="sidepanel__link"><img src="icons/social/Instagram.svg" alt="instagram" /></a>
-        <a href="#" class="sidepanel__link"><img src="icons/social/Github.svg" alt="Github" /></a>
+        <a href="https://github.com/DavidP1983" class="sidepanel__link"><img src="icons/social/Github.svg" alt="Github" /></a>
         <div class="sidepanel__divider"></div>
         <div class="sidepanel__text"><span>Social networks</span></div>
     </aside>
@@ -64,30 +64,27 @@
             <nav>
                 <ul class="menu__content">
                     <li class="menu__items">
-                        <a href="#" class="menu__link">ABOUT ME</a>
+                        <a href="#aboutme" class="menu__link">ABOUT ME</a>
                     </li>
                     <li class="menu__items">
-                        <a href="#" class="menu__link">MY EXPERIENCE</a>
+                        <a href="#experience" class="menu__link">MY EXPERIENCE</a>
                     </li>
                     <li class="menu__items">
-                        <a href="#" class="menu__link">MY SKILLS</a>
+                        <a href="#skills" class="menu__link">MY SKILLS</a>
                     </li>
                     <li class="menu__items">
-                        <a href="#" class="menu__link">MY SKILLS</a>
+                        <a href="#portfolio" class="menu__link">MY WORKS</a>
                     </li>
                     <li class="menu__items">
-                        <a href="#" class="menu__link">MY WORKS</a>
+                        <a href="#price-list" class="menu__link">PRICE LIST</a>
                     </li>
                     <li class="menu__items">
-                        <a href="#" class="menu__link">PRICE LIST</a>
-                    </li>
-                    <li class="menu__items">
-                        <a href="#" class="menu__link">CONTACTS</a>
+                        <a href="#contacts" class="menu__link">CONTACTS</a>
                     </li>
                 </ul>
             </nav>
             <div class="menu__social">
-                <a href="#" class="menu__link"><img src="icons/social-menu/Github.svg" alt="Github" /></a>
+                <a href="https://github.com/DavidP1983" class="menu__link"><img src="icons/social-menu/Github.svg" alt="Github" /></a>
                 <a href="#" class="menu__link"><img src="icons/social-menu/Instagram.svg" alt="instagram" /></a>
                 <a href="#" class="menu__link"><img src="icons/social-menu/Facebook.svg" alt="facebook" /></a>
             </div>
@@ -95,7 +92,7 @@
         <div class="menu__overlay"></div>
     </div>
 
-    <section class="promo">
+    <section class="promo" id="promo">
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -115,17 +112,27 @@
         </div>
     </section>
 
-    <section class="aboutme">
+    <section class="aboutme" id="aboutme">
         <div class="container">
             <div class="aboutme__grid-container">
                 <div class="aboutme__grid-image">
-                    <img src="img/about_me.jpg" alt="photo" />
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="img/aboutme.jpg">
+                        <source media="(min-width: 577px)" srcset="img/about_me.jpg">
+                        <img src="img/about_me.jpg" alt="photo" />
+                    </picture>
+                    <!-- <picture>
+                        <source type="image/webp" media="(max-width: 576px)" srcset="img/about.webp">
+                        <source media="(min-width: 577px)" srcset="img/about_me.jpg">
+                        <img src="img/about_me.jpg" alt="photo" />
+                    </picture> -->
+                    <!-- <img src="img/about_me.jpg" alt="photo" /> -->
                 </div>
                 <!-- <div id="image" class="aboutme__grid-image"></div> -->
-                <div class="aboutme__desc">
-                    <h2 class="title title_aboutme aboutme__title">About me</h2>
-                    <div class="subtitle subtitle_aboutme">My name is David</div>
-                    <div class="divider"></div>
+                 <div class="aboutme__desc">
+                    <h2 class="title title_aboutme">About me</h2>
+                    <div class="subtitle subtitle_aboutme  aboutme__subtitle">My name is David</div>
+                    <div class="divider aboutme__divider"></div>
                     <!-- Используем параграф, так как много текста и выглядит как параграф -->
                     <p class="aboutme__text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -179,13 +186,13 @@
         </div>
     </section>
 
-    <section class="resume">
+    <section class="resume" id="experience">
         <div class="container">
             <h2 class="title title_resume title__section-title">Experience</h2>
             <div class="subtitle subtitle_resume resume__subtitle">
                 How can I be useful
             </div>
-            <div class="divider divider_resume"></div>
+            <div class="divider divider_resume resume__divider"></div>
             <div class="resume__wrapper">
                 <div class="resume__column">
                     <h3 class="title title_fz20 resume__column-title">Education</h3>
@@ -279,7 +286,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <h2 class="title title_skills title__section-title">Skills</h2>
             <div class="subtitle subtitle_skills skills__subtitle">
@@ -447,7 +454,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="title title_portfolio title__section-title">Portfolio</h2>
             <div class="subtitle subtitle_portfolio portfolio__subtitle">
@@ -479,7 +486,7 @@
         </div>
     </section>
 
-    <section class="price-list">
+    <section class="price-list" id="price-list">
         <div class="container">
             <h2 class="title title_price-list title__section-title">
                 Price-list</h2>
@@ -519,16 +526,16 @@
         </div>
     </section>
 
-    <section class="contacts">
-        <div class="container">
+    <section class="contacts" id="contacts">
+       <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__photo">
                     <img src="img/about_me.jpg" alt="photo" />
                 </div>
                 <div class="contacts__desc">
                     <h2 class="title title_contacts contacts__title">Contacts</h2>
-                    <div class="subtitle subtitle_contacts">Get into contact with me</div>
-                    <div class="divider"></div>
+                    <div class="subtitle subtitle_contacts contacts__subtitle">Get into contact with me</div>
+                    <div class="divider contacts__divider"></div>
                     <div class="contacts__text">
                         In any way convenient for you:
                     </div>
@@ -557,10 +564,10 @@
                         </div>
                         <!-- Если оставить кнопку без обвертки, то наша кнопка растянитья во весь грид контейнер, если ее поместить в div, то она сократится в размере. Ее ширина формируется только засчет текста, который находится внутри кнопки -->
                         <div class="contacts__triggers">
-                                <button class="button button_form">Send a message</button>
+                                <button class="button button_form contacts__button">Send a message</button>
                              <div class="contacts__policy">
                                 <input required type="checkbox" id="agree" name="agree" value="agree">
-                                <span> I agree with the<a href="/policy.html"> privacy policy</a></span>
+                                <span> I agree with the<a href="policy.html"> privacy policy</a></span>
                              </div>
                         </div>
                         <!-- <button class="button button_form">Send a message</button>
@@ -574,6 +581,10 @@
             </div>
         </div>
     </section>
+
+  <a href="#promo" id="pageup" class="pageup">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#c70101" d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM377 271c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-87-87-87 87c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 167c9.4-9.4 24.6-9.4 33.9 0L377 271z"/></svg>
+    </a>
 
 
     <script src="js/script.js"></script>

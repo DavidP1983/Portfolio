@@ -1,0 +1,406 @@
+@media (max-width: 1439px) {
+   
+    // Если экран меньше чем  1439px, то мы скрываем sidepanel
+    .sidepanel {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .aboutme {
+        &__grid-container {
+            grid-template-columns: 400px 519px;
+            column-gap: 40px;
+        }
+       
+        &__skills {
+            grid-template-columns: repeat(2,249px);
+            column-gap: 20px;
+        }
+        &__skills-content {
+            // 194px + 40px + 15px = 249px  &__skills  grid-template-columns
+            grid-template-columns: 40px 194px;
+            column-gap: 15px;
+        }
+      
+    }
+    .resume {
+        &__wrapper {
+            padding: 0 35px 0 35px;
+            grid-template-columns: repeat(2,377px);
+        }
+        li {
+            &::after {
+                height: calc(100% + 16px);
+                top: -16px;
+            }
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(3, 270px);
+            justify-content: center;
+
+        }
+        &__progressbar {
+            grid-template-columns: repeat(3,290px);
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template: 280px / repeat(auto-fit, 280px);
+            // Прописали просто 280px, так как у нас нет никакого текста и нет необходимости в minmax(280px, auto); 
+            grid-auto-rows: 280px;
+            gap: 10px;
+            justify-content: center;
+            grid-template-areas: 
+            "uber pulse bread"
+            "plans iphad mac";
+
+        }
+        &__items {
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+            
+        }
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 400px 1fr;
+            column-gap: 20px;
+        }
+        &__form {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .aboutme {
+        &__grid-container {
+            // Чтоб правильно спозиционировать и подобрать размеры grid-container под данный медеиа запрос, мы будем ориентироваться на конетйнер .container в котор назодяться все елементы. Ширина его  max-width: 720px; исходя из этого -> 300 + 380 + 40(column-gap) = 720px, таким обрвзом наш grid-container вместился по шиине .container.
+            grid-template-columns: 300px 380px;
+        }
+        &__grid-image {
+            align-self: center;
+        }
+        &__skills {
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(116px, auto);
+        }
+        &__skills-content {
+            grid-template-columns: 40px 319px;
+            column-gap: 20px;
+        }
+    }
+    .resume {
+        // Первый вариант
+        // &__wrapper {
+        //     padding: 0 65px 0 65px;
+        //     grid-template-columns: repeat(2,1fr);
+        // }
+        // Второй вариант
+        &__wrapper {
+                padding: 0 0 0 18px;
+                grid-template-columns: repeat(2,1fr);
+                column-gap: 50px;
+            }
+        &__item {
+            &::before {
+                width: 26px;
+            }
+            &-head {
+                padding: 45px 0 0 81px;
+            }
+            &-icon {
+                left: 26px;
+            }
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(2,270px);
+            column-gap: 40px;
+        }
+        &__progressbar {
+            padding-top: 80px;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            gap: 20px;
+            grid-template-areas: 
+            "uber pulse"
+            "bread plans"
+            "iphad mac";
+
+        }
+    }
+    .price-list {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 320px);
+            padding: 60px 0 0 0;
+        }
+    }
+    .contacts {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+        }
+        &__subtitle {
+            font-size: 24px;
+        }
+        &__photo {
+            align-self: center;
+        }
+        &__form {
+            grid-template-columns: 1fr;
+            grid-template-rows: 45px 45px 190px 45px;
+            grid-auto-rows: minmax(45px, auto);
+        }
+        &__input {
+            grid-column: 1/3;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .subtitle {
+        line-height: 39px;
+        font-size: 28px;
+    }
+    .promo {
+        &__subtitle {
+            width: 300px;
+        }
+    }
+    .aboutme {
+        padding-top: 40px;
+        &__grid-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 340px auto auto;
+        }
+        &__grid-image {
+            grid-row: unset;
+            height: 100%;
+        }
+        &__subtitle {
+            margin-top: 26px;
+        }
+        &__divider {
+            margin-top: 15px;
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 260px);
+            &-content {
+                grid-template-columns: 40px 200px;
+                justify-items: center;
+            }
+        }
+    }
+    .resume {
+        &__wrapper {
+            padding: 0;
+            column-gap: 83px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__progressbar {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .portfolio {
+        padding-top: 40px;
+    }
+    .price-list {
+        padding-top: 40px;
+        &__wrapper {
+            padding-top: 20px;
+            justify-content: center;
+            row-gap: 20px;
+        }
+    }
+    .contacts {
+        padding-top: 40px;
+        &__wrapper {
+            padding: 0 35px 0 52px;
+            grid-template-columns: 1fr;
+        }
+        &__photo {
+            display: none;
+        }
+        &__subtitle {
+            margin-top: 26px;
+        }
+        &__divider {
+            margin-top: 15px;
+        }
+    }
+    .pageup {
+        right: 11px;
+        width: 35px;
+        height: 50px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .promo {
+        background: url(../img/main_bg.png) no-repeat 65%/cover;
+        background-attachment: fixed;
+        &__info {
+            margin-top: 32px; 
+        }
+    }
+    .subtitle {
+        font-size: 26px;
+    }
+    .hamburger {
+        right: 20px;
+    }
+    .aboutme {
+        &__grid-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 340px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            font-size: 24px;
+            line-height: 36px;
+        }
+        &__skills {
+            grid-template-columns: 1fr;
+        }  
+    }
+    .resume {
+        padding-top: 40px;
+        &__wrapper {
+            margin-top: 40px;
+            padding: 0 12px 0 8px;
+            grid-template-columns: 1fr;
+        }
+        &__subtitle {
+            font-size: 24px;
+            line-height: 36px;
+            margin-top: 20px;
+        }
+        &__divider {
+            margin-top: 15px;
+        }
+        &__item {
+            &::before {
+                width: 42px;
+            }
+            &-head {
+                padding: 45px 0 0 99px;
+            }
+            &-icon {
+                left: 42px;
+            }
+            &-title {
+                font-size: 11px;
+            }
+            &-body {
+                margin-top: 22px;
+            }
+        }
+        &__column {
+            &:nth-child(2) {
+                margin-top: 40px;
+            }
+        }
+
+    }
+    .skills {
+        padding-top: 40px;
+        &__wrapper {
+            margin-top: 20px;
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+        &__progressbar {
+            padding: 40px 10px 0 10px;
+            grid-template-columns: 1fr;
+            row-gap: 40px;
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-areas: 
+            "uber"
+            "pulse"
+            "bread"
+            "plans"
+            "mac"
+            "iphad";
+       
+        }
+    }
+    .price-list {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 299px);
+
+        }
+    }
+    .contacts {
+        padding: 40px 0 50px 0;
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: 1fr;
+        }
+        &__subtitle {
+            font-size: 23px;
+        }
+        &__form {
+            grid-template-columns: 1fr;
+            grid-template-rows: 45px 45px 190px 45px 36px;
+            grid-auto-rows: minmax(45px,auto);
+        }
+        &__triggers {
+            grid-column: unset;
+            grid-template-columns: 1fr;
+            column-gap: unset;
+            row-gap: 20px;
+        }
+        &__button {
+            order: 2;
+            width: 219px;
+            margin: 0 auto;
+        }
+        &__policy {
+            width: 180px;
+            margin: 0 auto;
+        }
+
+    }
+    .pageup {
+        right: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+}
+

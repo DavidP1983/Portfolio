@@ -5,7 +5,8 @@
     position: relative;
     // Поскольку весь код у нас компилируется в папку css, то нам необходимо из нее выйти и зайти в папку img
     background: url('../img/main_bg.png') no-repeat 50%/cover;
-    padding: 205px;
+    padding-top: 205px;
+    background-attachment: fixed;
     &__subtitle {
         // Укажим ширину заголовка для переноса текста или можем поставить тэг <br>
         width: 535px;
